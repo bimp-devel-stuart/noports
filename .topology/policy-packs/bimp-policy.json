@@ -1,0 +1,134 @@
+{
+  "name": "bimp-policy",
+  "objects": [
+    {
+      "id": "constraint.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6.77664f53_f42e_4e06_bdc6_39b6f97b8e95.b9b6bfca_d403_4dc8_9e5d_8ecb6cb81e9b",
+      "kind": "constraint",
+      "title": "Approved base image transition: test to test2",
+      "metadata": {
+        "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+        "created_at": "2026-07-01T16:06:34.646Z"
+      },
+      "modality": "MUST",
+      "severity": "medium",
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "reason": "rewr",
+          "phase_id": "77664f53-f42e-4e06-bdc6-39b6f97b8e95",
+          "to_image": "test2",
+          "from_image": "test",
+          "mapping_id": "b9b6bfca-d403-4dc8-9e5d-8ecb6cb81e9b",
+          "phase_name": "Baseline",
+          "remediation": {
+            "enabled": true,
+            "critical_fast_track": false
+          },
+          "applies_after": null,
+          "platform_scope": "linux/amd64",
+          "policy_group_id": "bfadbc6d-3175-4bc2-95b4-1036ed2318e6",
+          "source_attribution": null,
+          "policy_group_version": 1
+        }
+      },
+      "constraint_type": "base_image_policy"
+    },
+    {
+      "id": "policy.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6",
+      "kind": "policy",
+      "title": "Repository image baseline",
+      "metadata": {
+        "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+        "created_at": "2026-07-01T15:59:23.600Z"
+      },
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "policy_group_id": "bfadbc6d-3175-4bc2-95b4-1036ed2318e6",
+          "external_reference": null,
+          "policy_group_version": 1
+        }
+      }
+    },
+    {
+      "id": "policy.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6.77664f53_f42e_4e06_bdc6_39b6f97b8e95",
+      "kind": "policy",
+      "title": "Baseline",
+      "metadata": {
+        "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+        "created_at": "2026-07-01T15:59:23.700Z"
+      },
+      "lifecycle": "active",
+      "extensions": {
+        "com.pendrica.bimp": {
+          "phase_id": "77664f53-f42e-4e06-bdc6-39b6f97b8e95",
+          "source_ref": null,
+          "source_kind": "internal",
+          "policy_group_id": "bfadbc6d-3175-4bc2-95b4-1036ed2318e6",
+          "policy_group_version": 1
+        }
+      }
+    }
+  ],
+  "version": "1",
+  "metadata": {
+    "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+    "created_at": "2026-07-01T16:17:59.512Z"
+  },
+  "mediaType": "application/vnd.pendrica.vouss.policy-pack.v0.1+json",
+  "signature": {
+    "key_id": "sk_f81fb6ca-8df0-4c5c-8577-91184972b17e",
+    "algorithm": "ed25519",
+    "signature": "HcEDiGXdDemaood8yuoIOc9MVLfahCdd-GeGalkTVNWon7sFbDCmH2aIlaqiVVOHhlRN7u3FhbDBFaaOxpvACg",
+    "signed_at": "2026-07-01T16:17:59.514Z",
+    "key_version": "2",
+    "payload_digest": "sha256:74ef20897c01a818f1a65d8fdb3e5b12b93f1db34159c507265e7aba6640839d",
+    "canonicalization_profile": "vouss-otop-jcs-v0.1"
+  },
+  "extensions": {
+    "com.pendrica.bimp": {
+      "rendered_at": "2026-07-01T16:17:59.512Z",
+      "payload_digest": null,
+      "organization_id": "1516cef6-8054-4600-9017-6575ac622cc6",
+      "policy_group_id": "bfadbc6d-3175-4bc2-95b4-1036ed2318e6",
+      "policy_group_version": 1,
+      "policy_group_version_id": "ed3a3514-b55a-4a9c-bfc4-b65a5bf712b7"
+    }
+  },
+  "otop_version": "0.2",
+  "relationships": [
+    {
+      "id": "rel.bimp.b9b6bfca_d403_4dc8_9e5d_8ecb6cb81e9b.derived_from.77664f53_f42e_4e06_bdc6_39b6f97b8e95",
+      "to": "policy.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6.77664f53_f42e_4e06_bdc6_39b6f97b8e95",
+      "from": "constraint.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6.77664f53_f42e_4e06_bdc6_39b6f97b8e95.b9b6bfca_d403_4dc8_9e5d_8ecb6cb81e9b",
+      "type": "derived_from",
+      "metadata": {
+        "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+        "created_at": "2026-07-01T16:17:59.512Z"
+      },
+      "extensions": {
+        "com.pendrica.bimp": {
+          "phase_id": "77664f53-f42e-4e06-bdc6-39b6f97b8e95",
+          "mapping_id": "b9b6bfca-d403-4dc8-9e5d-8ecb6cb81e9b",
+          "policy_group_version": 1
+        }
+      }
+    },
+    {
+      "id": "rel.bimp.b9b6bfca_d403_4dc8_9e5d_8ecb6cb81e9b.governed_by.bfadbc6d_3175_4bc2_95b4_1036ed2318e6",
+      "to": "policy.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6",
+      "from": "constraint.bimp.bfadbc6d_3175_4bc2_95b4_1036ed2318e6.77664f53_f42e_4e06_bdc6_39b6f97b8e95.b9b6bfca_d403_4dc8_9e5d_8ecb6cb81e9b",
+      "type": "governed_by",
+      "metadata": {
+        "actor": "4d0900d4-7259-493c-930a-d0a1bea23d40",
+        "created_at": "2026-07-01T16:17:59.512Z"
+      },
+      "extensions": {
+        "com.pendrica.bimp": {
+          "mapping_id": "b9b6bfca-d403-4dc8-9e5d-8ecb6cb81e9b",
+          "policy_group_version": 1
+        }
+      }
+    }
+  ]
+}
